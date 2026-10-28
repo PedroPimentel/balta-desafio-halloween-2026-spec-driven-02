@@ -1,0 +1,14 @@
+@baseUrl = http://localhost:5041
+
+### Create a link and keep the returned management key private
+# @name createLink
+POST {{baseUrl}}/api/links
+Content-Type: application/json
+
+{
+  "targetUrl": "https://example.com"
+}
+
+### Read access statistics using the key returned by createLink
+GET {{baseUrl}}/api/links/{{createLink.response.body.$.code}}/stats
+X-Management-Key: {{createLink.response.body.$.managementKey}}

@@ -1,0 +1,14 @@
+## Build output
+bin/
+obj/
+
+## IDE files
+.vs/
+.vscode/
+*.user
+*.suo
+
+## Local database
+*.db
+*.db-shm
+*.db-wal

@@ -11,4 +11,4 @@
 | T-07 | Redirecionar por código | RF-04 | T-05 | Teste de integração retorna 302 |
 | T-08 | Incrementar contador de forma atômica | RF-05, RN-04, D-02 | T-07 | Teste concorrente não perde contagem |
 | T-09 | Endpoint de estatísticas com chave | RF-07, DC-03 | T-05 | Chave errada retorna 401 |
-| T-10 | Cache em memória dos links mais acessados | | T-07 | Latência de redirect cai |
+| T-10 | Cache em memória dos links mais acessados | | T-07 | Teste confirma leituras repetidas sem nova consulta ao banco e sem perder contagens |

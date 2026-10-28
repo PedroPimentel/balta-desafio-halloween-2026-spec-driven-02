@@ -20,6 +20,13 @@ do projeto.
 - D-04: unicidade do código garantida por índice único no banco, além da
   checagem no serviço, porque a checagem sozinha tem corrida
 - D-05: chave de gerenciamento da DC-03 armazenada como hash, nunca em texto puro
+- D-06: Swashbuckle.AspNetCore gera OpenAPI e disponibiliza Swagger UI somente
+  em Development, para documentar e testar a API durante o desenvolvimento
+  sem expor a interface em produção
+- D-07: links resolvidos por redirect ficam em cache em memória limitado a
+  10.000 entradas, com expiração deslizante de 5 minutos e absoluta de 30
+  minutos (ou a expiração do link, se anterior); o contador continua sendo
+  incrementado atomicamente no banco em todo acesso válido
 
 ## Modelo de dados
 Link
